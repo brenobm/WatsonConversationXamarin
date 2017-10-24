@@ -1,0 +1,9 @@
+﻿namespace WatsonCC.Helpers
+{
+    public static class ConfigurationSensitiveDataHelper
+    {
+        public const string WATSON_CONVERSATION_USERNAME = "";
+        public const string WATSON_CONVERSATION_PASSWORD = "";
+        public const string WATSON_CONVERSATION_WORKSPACE_ID = "";
+    }
+}

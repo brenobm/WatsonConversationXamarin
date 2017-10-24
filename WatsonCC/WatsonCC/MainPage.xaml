@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:WatsonCC"
+             xmlns:controls="clr-namespace:WatsonCC.Controls"
+             x:Class="WatsonCC.MainPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding Messages}"
+                      HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding FromWho}" />
+                                <Label Text=": " />
+                                <controls:HtmlLabel Text="{Binding Message}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+                
+            <Entry Text="{Binding Message, Mode=TwoWay}" />
+            <Button Text="Enviar" Command="{Binding SendMessageToWatson}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
