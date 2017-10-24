@@ -12,6 +12,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ConfigurationSensitiveDataHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\BindableListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\HtmlLabel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
@@ -31,5 +32,8 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Helpers\ConfigurationSensitiveDataHelper.cs_template" />
   </ItemGroup>
 </Project>
